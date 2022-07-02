@@ -1,0 +1,1 @@
+import{_ as e}from"./index.5a8f82a3.js";import{o as s,c as o,a as _}from"./vendor.5e9faa73.js";const t={},a={class:"blogs"},c=_("h1",null,"This is an blogs page",-1),n=[c];function r(i,l){return s(),o("div",a,n)}var p=e(t,[["render",r]]);export{p as default};

@@ -1,9 +1,44 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
-</script>
 
 <template>
+  <header>
+    <GpHeader :routes="routes" />
+  </header>
+
+  <main>
+    <RouterView></RouterView>
+  </main>
+</template>
+
+<script>
+import { RouterView } from 'vue-router'
+import GpHeader from '@/components/gp-header/Header.vue'
+
+export default {
+  components: {
+    GpHeader
+  },
+  data() {
+    return {
+      routes: [
+        {
+          name: "Home",
+          path: "/"
+        },
+        {
+          name: "Blogs",
+          path: "/blogs"
+        },
+        {
+          name: "About",
+          path: "/about"
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<!-- <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -20,11 +55,16 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
   <RouterView />
 </template>
-
+ -->
 <style>
 @import '@/assets/base.css';
 
-#app {
+header {
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -33,7 +73,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
 }
 
 header {
-  line-height: 1.5;
   max-height: 100vh;
 }
 
@@ -116,5 +155,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>

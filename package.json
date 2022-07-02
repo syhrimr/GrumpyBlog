@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
+    "vite:build": "vite build",
+    "build": "vue-tsc --noEmit",
     "preview": "vite preview --host --port 3000",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:3000/ 'cypress open'",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "pinia": "^2.0.11",
+    "sass": "^1.53.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },
